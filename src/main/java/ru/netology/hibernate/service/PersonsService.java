@@ -1,10 +1,10 @@
 package ru.netology.hibernate.service;
 
-import exception.PersonNotFoundException;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import ru.netology.hibernate.entity.Persons;
 import ru.netology.hibernate.entity.PersonsPrimaryKey;
+import ru.netology.hibernate.exception.PersonNotFoundException;
 import ru.netology.hibernate.repository.PersonsRepository;
 
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.Optional;
 @Service
 public class PersonsService {
 
-    PersonsRepository personsRepository;
+    private final PersonsRepository personsRepository;
 
     public List<Persons> findByCityOfLiving(String city) {
         return personsRepository.findByCityOfLiving(city);

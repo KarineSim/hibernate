@@ -14,7 +14,7 @@ import java.util.Optional;
 @RequestMapping("/persons")
 public class PersonsController {
 
-    private PersonsService personsService;
+    private final PersonsService personsService;
 
     @GetMapping("/by-city")
     public List<Persons> getPersonsByCity(@RequestParam("city") String city) {
