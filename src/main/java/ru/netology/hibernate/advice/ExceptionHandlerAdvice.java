@@ -1,10 +1,10 @@
-package advice;
+package ru.netology.hibernate.advice;
 
-import exception.PersonNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import ru.netology.hibernate.exception.PersonNotFoundException;
 
 @RestControllerAdvice
 public class ExceptionHandlerAdvice {
